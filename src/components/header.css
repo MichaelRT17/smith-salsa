@@ -1,0 +1,13 @@
+.main-header-properties {
+    background-color: #424242;
+    color: #F0EDEE;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nacho-icon {
+    height: 64px;
+    padding: 4px;
+    margin: auto 16px;
+}
