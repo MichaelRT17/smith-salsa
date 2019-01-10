@@ -65,3 +65,7 @@
         width .25s ease-out .5s, 
         height .25s ease-out .75s;
 }
+
+.drawn-button:focus {
+    outline: none;
+}

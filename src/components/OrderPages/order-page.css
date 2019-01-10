@@ -1,3 +1,7 @@
+.test {
+    transition: all .25s cubic-bezier(.53, .01, .35,1.5)
+}
+
 .order-form {
     position: relative;
     display: inline-block;
@@ -9,11 +13,12 @@
     border-radius: 40px;
     margin: 40px 0;
     left: 50%;
-    /* translate */
+    transform: translate(-50%, 0);
+
 }
 
 .form-title {
-    color: black;
+    color: #424242;
     font-weight: 100;
     letter-spacing: 0.01em;
     margin-left: 15px;
@@ -22,17 +27,17 @@
 }
 
 .form-button {
-    /* extend transition? */
+    transition: all .25s cubic-bezier(.53, .01, .35,1.5);
     margin-top: 35px;
     background-color: white;
-    border: 1px solid red;
+    border: 1px solid #DB2955;
     line-height: 0;
     font-size: 17px;
     display: inline-block;
     box-sizing: border-box;
     padding: 20px 15px;
     border-radius: 60px;
-    color: red;
+    color: #DB2955;
     font-weight: 100;
     letter-spacing: .01em;
     position: relative;
@@ -41,5 +46,74 @@
 
 .form-button:hover, .form-button:focus {
     color: white;
-    background-color: red;
+    background-color: #DB2955;
+}
+
+.question {
+    position: relative;
+    padding: 10px 0;
+}
+
+.question:first-of-type {
+    padding-top: 0;
+}
+
+.question:last-of-type {
+    padding-bottom: 0;
+}
+
+.question-label {
+    transition: all .25s cubic-bezier(.53, .01, .35,1.5);
+    transform-origin: left center;
+    color: #DB2955;
+    font-weight: 100;
+    letter-spacing: .01em;
+    font-size: 17px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.info-input {
+    transition: all .25s cubic-bezier(.53, .01, .35,1.5);
+    appearance: none;
+    background-color: none;
+    border: 2px solid #DB2955;
+    line-height: 0;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    /* border-radius: 60px; */
+    color: #DB2955;
+    font-weight: 100;
+    letter-spacing: .01em;
+    position: relative;
+    z-index: 1;
+}
+
+.info-input:focus {
+    outline: none;
+    background: #DB2955;
+    color: white;
+    margin-top: 30px;
+}
+
+.info-input:valid {
+    margin-top: 30px;
+}
+
+.info-input:focus ~ .question-label {
+    transform: translate(0, -35px)
+}
+
+.info-input:valid ~ .question-label {
+    text-transform: uppercase;
+    font-style: italic;
+    transform: translate(5px, -35px) scale(0.6);
 }

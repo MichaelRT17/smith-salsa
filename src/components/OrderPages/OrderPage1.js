@@ -1,34 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DrawButton from '../DrawButton';
+import { connect } from 'react-redux';
+import { orderQuantity } from '../../ducks/reducer';
 import './order-page.css';
 
-function OrderPage1() {
-    return (
-        <div>
-            <form className='order-form'>
-                <h1 className='form-title'>Fancy Text Inputs</h1>
-                <div className=''>
-                    <input type='text' required/>
-                    <label>First Name</label>
-                </div>
-                <div className=''>
-                    <input type='text' required/>
-                    <label>Last Name</label>
-                </div>
-                <div className=''>
-                    <input type='text' required/>
-                    <label>Email Address</label>
-                </div>
-                <div className=''>
-                    <input type='text' required/>
-                    <label>Email Confirm</label>
-                </div>
-                <button className='form-button'>Submit</button>
-            </form>
-            OrderPage1
-            <DrawButton buttonName='Schedule Delivery' destination='order/2' />
-        </div> 
-    )
+class OrderPage1 extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            quantity: 0
+        }
+    }
+    
+    render() {
+        return (
+            <div>
+                OrderPage1
+                <DrawButton buttonName='Schedule Delivery' destination='order/2' />
+            </div> 
+        )
+    }
+}
+
+function mapStateToProps(state) {
+    return {
+        
+    }
 }
 
 export default OrderPage1;
