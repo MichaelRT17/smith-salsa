@@ -12,6 +12,7 @@
     font-weight: 700;
     position: relative;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .drawn-button::before,

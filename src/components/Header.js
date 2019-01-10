@@ -7,11 +7,11 @@ import './header.css'
 function Header() {
     return (
         <div className='main-header-properties'>
-            <Link to='/'>
+            <Link to='/' style={{margin: 'auto 0'}}>
                 <img src={logo} alt='nacho icon' className='main-nacho-icon' />
             </Link>
             <h1>Salsa</h1>
-            <DrawButton buttonName='Order'/>
+            <DrawButton buttonName='Order' destination='order/1' />
         </div> 
     )
 }

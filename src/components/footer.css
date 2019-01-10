@@ -1,0 +1,12 @@
+.social-media-icon-holder {
+    display: flex;
+    justify-content: space-between;
+    width: 288px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.social-media-icon-holder > img {
+    height: 48px;
+    cursor: pointer;
+}
