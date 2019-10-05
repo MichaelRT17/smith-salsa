@@ -16,11 +16,11 @@ function OrderPage3() {
                     <label className='question-label'>Last Name</label>
                 </div>
                 <div className='question'>
-                    <input type='text' required className='info-input'/>
+                    <input type='email' required className='info-input'/>
                     <label className='question-label'>Email Address</label>
                 </div>
                 <div className='question'>
-                    <input type='text' required className='info-input'/>
+                    <input type='tel' required className='info-input'/>
                     <label className='question-label'>Phone Number</label>
                 </div>
                 {/* <h1 className='form-title'>Location</h1> */}
